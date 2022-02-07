@@ -1,0 +1,35 @@
+.h1, .h2, .h3, .h4, .h5, .h6 {margin: 10px 0 auto;}
+.h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
+	font-weight: 600;
+	font-size: 65%;
+	line-height: 1;
+	color: #999;
+}
+@media (min-width: $screen-md) {
+	.h1 {font-size: 2.75rem;}
+	.h2 {font-size: 2.5rem;}
+	.h3 {font-size: 2.25rem;}
+	.h4 {font-size: 2rem;}
+	.h5 {font-size: 1.75rem;}
+	.h6 {font-size: 1.5rem;}
+}
+.smaller {font-size: 13px;line-height: 20px;}
+.small {font-size: 15px;line-height: 20px;}
+p {font-size: 1.25em;line-height: 24px;padding: 3.5px 0;}
+.vast {font-size: 19px;line-height: 28px;}
+.big {font-size: 21px;line-height: 32px;}
+
+// Light
+.font-light {font-weight: 300;}
+
+// Regular
+.font-normal {font-weight: 400;}
+
+// SemiBold
+.font-semibold {font-weight: 600;}
+
+// Bold
+.font-bold {font-weight: 700;}
+
+// ExtraBold
+.font-extrabold {font-weight: 800;}

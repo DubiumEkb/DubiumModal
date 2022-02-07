@@ -1,0 +1,412 @@
+@import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+body {background-color: #F2F2F2;}
+.body-main {
+	display: grid;
+	grid-gap: 15px;
+	grid-template-areas:
+	"header"
+	"main"
+	"footer";
+}
+.header-main {grid-area: header;}
+.main-main {grid-area: main;}
+.footer-main {grid-area: footer;}
+.header-main {
+	margin-top: 30px;
+	color: #00204A;
+
+	p > a {
+		text-decoration: none;
+		font-weight: bold;
+		color: #C4C4C4;
+
+		&:hover {
+			color: blue;
+		}
+	}
+}
+.section-main {
+	margin-top: 15px;
+
+	header {
+		background-color: #0E3464;
+		padding: 15px;
+		text-indent: 15px;
+		font-weight: 600;
+		color: #F2F2F2;
+		margin-bottom: 25px;
+	}
+
+	.link-main {
+
+		> a {
+			text-align: center;
+			user-select: none;
+			vertical-align: middle;
+			padding: 9px 18px;
+			text-decoration: none;
+			font-weight: 700;
+			cursor: pointer;
+			transition: all 150ms linear;
+			letter-spacing: 1px;
+		}
+
+		.docs {
+			border: 3px solid;
+			border-color: #00204A;
+			background-color: #00204A;
+			color: white;
+
+			&:hover {
+				border-color: #6080eb;
+				background-color: #6080eb;
+				box-shadow: 0px 2px 0 #496EE8, 2px 4px 6px #496EE8;
+			}
+		}
+
+		.github {
+			border: 3px solid;
+			border-color: #34495e;
+			color: #34495e;
+			background-color: transparent;
+
+			&:hover {
+				border: 3px solid;
+				border-color: #34495e;
+				background-color: #34495e;
+				box-shadow: 0px 2px 0 #34495e, 2px 4px 6px #34495e;
+				color: white;
+			}
+		}
+
+		.download {
+			background-color: #006DFF;
+			color: white;
+
+			&:hover {
+				box-shadow: 0px 2px 0 #006DFF, 2px 4px 6px #006DFF;
+			}
+		}
+	}
+}
+
+.footer-main {
+	color: #00204A;
+	font-weight: bold;
+	width: 100%;
+
+	&--container {
+		margin: 7px auto;
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				color: #00204A;
+			}
+		}
+	}
+}
+
+@media (max-width: 544px) {
+	.logo-main {width: 70%;}
+}
+
+@media (min-width: 768px) {
+	.section-main {
+		margin-top: 45px;
+
+		header {text-indent: 25px;}
+	}
+
+	.logo-main {width: 240px;}
+	.footer-main {position: relative;}
+	.body-main {margin-top: 50px;}
+}
+@media (min-width: 993px) {
+	.logo-main {width: 300px;}
+}
+
+// ==============
+// Docs
+// ==============
+
+// Маленькие девайсы (Смартфон)
+$screen-sm: 544px;
+
+// Маленькие девайсы пейзаж (Смартфон пейзаж)
+$screen-md: 768px;
+
+// Средние девайсы (Планшет)
+$screen-l: 993px;
+
+// Большие девайсы (Ноутбук)
+$screen-lg: 1200px;
+
+// Очень большие девайсы (Компьютер)
+$screen-xl: 1600px;
+
+$grid-width: 15px;
+
+.container-docs {
+	padding-right: ($grid-width / 2);
+	padding-left: ($grid-width / 2);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width: $screen-sm) {
+	.container-docs {width: 720px;}
+}
+
+@media (min-width: $screen-md) {
+	.container-docs {width: 800px;}
+}
+
+@media (min-width: $screen-l) {
+	.container-docs {width: 1140px;}
+}
+
+@media (min-width: $screen-lg) {
+	.container-docs {width: 1240px;}
+}
+
+@media (min-width: $screen-xl) {
+	.container-docs {width: 1400px;}
+}
+
+// ==============
+// SideBar
+// ==============
+
+@media (max-width: 1200px) {
+
+	.docs {
+		background-color: #FFFFF4;
+		color: #000;
+		min-height: 100%;
+		position: relative;
+		-webkit-text-size-adjust: none;
+		overflow-x: hidden;
+	}
+
+	/* Menu Styles */
+
+	.mobile-navigation {
+		width: 100%;
+		transform: translate(0px, 0px);
+		transition: 0.30s ease;
+		
+		&.active {
+			transform: translate(260px, 0px);
+		}
+	}
+
+	#navigation {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		width: 260px;
+		left: -260px;
+		height: 100%;
+		transform: translate(0px, 0px);
+		transition: 0.30s ease;
+
+		&.active {
+			overflow-y: auto;
+			overflow-x: hidden;
+		}
+
+		ul.mobile-nav > li > a {
+			background: #4F7389;
+			color: #FFFFFF;
+			font-size: 24px;
+		}
+
+		&.active {
+			transform: translate(260px, 0px);
+		}
+	}
+
+	.mobile-navigation {
+		width: 100%;
+		transform: translate(0px, 0px);
+		transition: 0.30s ease;
+		
+		.active {
+			transform: translate(260px, 0px);
+		}
+	}
+
+	.mobile-nav {
+		
+		ul.sub-menu {
+			text-transform: uppercase;
+		}
+
+		a {
+			display: block;
+			color: #777779;
+			padding: 15px 30px;
+			border-top: 1px solid #4F7389;
+			text-decoration: none;
+
+			&:hover {
+				background: #4F7389;
+				color: #FFFFFF;
+			}
+		}
+
+	}
+
+	/* Nav Icon */
+	#nav-icon {
+		width: 30px;
+		height: 20px;
+		display: block;
+		position: absolute;
+		top: 40px;
+		left: 20px;
+		transform: rotate(0deg);
+		transition: .5s ease-in-out;
+		cursor: pointer;
+		display: block;
+
+		text-decoration: none;
+		color: #000;
+
+		&:after {
+			content: "Menu";
+			margin-left: 40px;
+			font-size: 24px;
+			text-transform: uppercase;
+			text-decoration: none;
+			line-height: 0.95em;
+		}
+
+		span {
+			display: block;
+			position: absolute;
+			height: 3px;
+			width: 100%;
+			background: #000;
+			opacity: 1;
+			left: 0;
+			transform: rotate(0deg);
+			transition: .25s ease-in-out;
+
+			&:nth-child(1) {
+				top: 0px;
+				transform-origin: left center;
+			}
+
+			&:nth-child(2) {
+				top: 8px;
+				transform-origin: left center;
+			}
+
+			&:nth-child(3) {
+				top: 16px;
+				transform-origin: left center;
+			}
+		}	
+	}
+
+	/* Icon Animation */
+
+	.active {
+		
+		#nav-icon span:nth-child(1) {
+			transform: rotate(45deg);
+			top: -3px;
+			left: 8px;
+		}
+
+		#nav-icon span:nth-child(2) {
+			width: 0%;
+			opacity: 0;
+		}
+
+		#nav-icon span:nth-child(3) {
+			transform: rotate(-45deg);
+			top: 19px;
+			left: 8px;
+		}
+	}
+}
+
+
+$primary-hover: #006DFF;
+$primary-bg: #0E3464;
+$primary-a-bg: #00204A;
+.sidebar {
+	background-color: $primary-bg;
+	max-width: 250px;
+	width: 100%;
+	&-menu {
+		width: 100%;
+		font-size: 12pt;
+		font-family: sans-serif;
+		color: #ffffff;
+		background: $primary-bg;
+		&,
+		& ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			a {
+				position: relative;
+				display: block;
+				color: #ffffff;
+				text-decoration: none;
+				padding: 20px 25px;
+				> span {
+					margin-right: 30px;
+				}
+			}
+			&.have-children {
+				position: relative;
+				&:after {
+					right: 15px;
+					top: 17px;
+					border: solid transparent;
+					
+					position: absolute;
+					pointer-events: none;
+					transition: all 0.2s ease;
+					
+					font-family: "Font Awesome 5 Free";
+					content: "\f054";
+					-moz-osx-font-smoothing: grayscale;
+					-webkit-font-smoothing: antialiased;
+					display: inline-block;
+					font-style: normal;
+					font-variant: normal;
+					text-rendering: auto;
+					line-height: 1;
+					font-weight: 900;
+				}
+				a:hover {
+					background: $primary-hover;
+				}
+			}
+			ul {
+				display: none;
+				a {
+					background: $primary-a-bg;
+				}
+			}
+		}
+		:after {
+			transform: rotate(-90deg);
+		}
+		.active {
+			background-color: $primary-hover;
+			&:after {
+				transform: rotate(90deg);
+			}
+		}
+	}
+}

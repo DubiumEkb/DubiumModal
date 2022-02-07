@@ -1,0 +1,108 @@
+<!-- <nav class="light-blue lighten-1" role="navigation">
+	<div class="nav-wrapper container"><a id="logo-container" class="brand-logo" href="{{ "/" | relative_url }}">Logo</a>
+		{% assign default_paths = site.pages | map: "path" %}
+		{% assign page_paths = site.header_pages | default: default_paths %}
+
+		<ul class="right hide-on-med-and-down">
+			<li><a href="{{ "/" | relative_url }}">Home </a></li>
+			<li><a href="{{ "/logs" | relative_url }}">Logs</a></li>
+			{% if page_paths %}
+				{% for path in page_paths %}
+					{% assign my_page = site.pages | where: "path", path | first %}
+					{% if my_page.title %}
+						<li><a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		</ul>
+
+		<ul id="nav-mobile" class="side-nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="{{ "/logs" | relative_url }}">Logs</a></li>
+			{% if page_paths %}
+				{% for path in page_paths %}
+					{% assign my_page = site.pages | where: "path", path | first %}
+					{% if my_page.title %}
+						<li><a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		</ul>
+
+		<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+	</div>
+</nav> -->
+<div class="mobile-navigation">
+	<a class="menu-btn menu-link" href="#navigation" id="nav-icon">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+</div>
+
+<nav id="navigation" class="sidebar">
+	<ul class="sidebar-menu" id="mobile">
+		<li>
+			<h1 class="nav-section-title h2">UI-Margin</h1>
+		</li>
+		<hr>
+		<li class="have-children">
+			<a href="#">
+				<span class="fa fa-university"></span>Элементы
+			</a>
+			<ul>
+				<li>
+					<a href="#">Add Exhibition</a>
+				</li>
+				<li>
+					<a href="#">View Exhibitions</a>
+				</li>
+			</ul>
+		</li>
+		<li class="have-children">
+			<a href="#">
+				<span class="fa fa-tags"></span>Компоненты
+			</a>
+			<ul>
+				<li>
+					<a href="#">Add Category</a>
+				</li>
+				<li>
+					<a href="#">View Categories</a>
+				</li>
+			</ul>
+		</li>
+		<li class="have-children">
+			<a href="#">
+				<span class="fa fa-trophy"></span>Разметка
+			</a>
+			<ul>
+				<li>
+					<a href="#">Add Award</a>
+				</li>
+				<li>
+					<a href="#">View Awards</a>
+				</li>
+			</ul>
+		</li>
+		<li class="have-children">
+			<a href="#">
+				<span class="fa fa-gavel"></span>JavaScript
+			</a>
+			<ul>
+				<li>
+					<a href="#">Add Jury</a>
+				</li>
+				<li>
+					<a href="#">View Juries</a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">
+				<span class="fa fa-envelope"></span>Текущая версия v0.0.2
+			</a>
+		</li>
+	</ul>
+	<!-- sidebar menu end-->
+</nav>

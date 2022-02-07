@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	line-height: 1.25;
+}
+
+$screen-layout: (
+	sm: 544px,
+	md: 768px,
+	l: 993px,
+	lg: 1200px,
+	xl: 1600px
+);
+
+// FlexBox сетка 15 колонок
+$flexbox-columns: 15;
+
+// CSS Grid Layout сетка 12 колонок
+$grid-columns: 12;
+$grid-rows: 13;
+
+// padding отступ справа и слева
+$grid-width: 15px;
