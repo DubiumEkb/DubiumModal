@@ -1,0 +1,215 @@
+/**
+ * DubiumModal 0.0.1
+ *
+ * https://dubiumekb.github.io/DubiumModal/
+ *
+ * Copyright (c) 2022 Михаил Вострокнутов
+ *
+ * Released under the MIT License
+ *
+ * Released on: February 9, 2022
+ */
+
+:root {
+	--dubium-modal-overlay: rgba(0, 0, 0, 0.5);
+
+	/* Header */
+	--dubium-modal-padding-header: 15px;
+	--dubium-modal-border-bottom: 1px solid #ecf0f1;
+	--dubium-modal-bg-header: #ffffff;
+	--dubium-modal-br-top-left: 3px;
+	--dubium-modal-br-top-right: 3px;
+
+	--dubium-modal-close-padding: 7px;
+	--dubium-modal-close: rgba(0, 0, 0, 0.5);
+	--dubium-modal-close-hover: rgba(0, 0, 0, 0.7);
+	/* Body */
+	--dubium-modal-padding-body: 30px 15px;
+	--dubium-modal-bg-body: #ffffff;
+	/* Footer */
+	--dubium-modal-padding-footer: 15px;
+	--dubium-modal-bg-footer: #ecf0f1;
+
+	--dubium-modal-br-left-bottom: 3px;
+	--dubium-modal-br-right-bottom: 3px;
+}
+
+.modal {
+	&.fade {
+		display: none;
+		position: fixed;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1010;
+
+		&.hide {
+			display: block;
+			animation: modalHide var(--dubium-modal-speed-animation) both;
+			.modal__dialog {
+				animation: modalHide var(--dubium-modal-speed-animation) both;
+			}
+		}
+
+		&.show {
+			display: block;
+			animation: modalShow var(--dubium-modal-speed-animation) both;
+			.modal__dialog {
+				animation: modalShow var(--dubium-modal-speed-animation) both;
+			}
+		}
+	}
+
+
+	& &__dialog {
+		opacity: 0;
+		position: relative;
+		z-index: 1020;
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		pointer-events: auto;
+		outline: 0;
+
+		-webkit-box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12), 0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+		box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12), 0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+
+		&--fullscreen {
+			top: 0;
+		}
+		@media (min-width: 576px) {
+			max-width: 500px;
+			&--fullscreen {
+				width: 100vw;
+				height: 100%;
+				max-width: none;
+			}
+			&--large {
+				max-width: 500px;
+			}
+			&--small {
+				max-width: 360px;
+			}
+		}
+
+		@media (min-width: 992px) {
+			&--large {
+				max-width: 800px;
+			}
+		}
+
+		top: 1.75em;
+		left: 50%;
+
+		/* transform: translate(left, top); */
+		transform: translate(-50%, 0);
+
+		&--center {
+			top: 50%;
+
+			/* transform: translate(left, top); */
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	& &__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: var(--dubium-modal-padding-header);
+		background-color: var(--dubium-modal-bg-header);
+
+		border-top-left-radius: var(--dubium-modal-br-top-left);
+		border-top-right-radius: var(--dubium-modal-br-top-right);
+		border-bottom: var(--dubium-modal-border-bottom);
+		&--title {
+			margin-bottom: 0;
+			line-height: 1.5;
+		}
+		&--close {
+			cursor: pointer;
+			border: none;
+			outline: none;
+			background-color: transparent;
+			width: 30px;
+			height: 30px;
+			padding: var(--dubium-modal-close-padding);
+
+			transition: var(--dubium-modal-transition);
+			color: var(--dubium-modal-close);
+			&:hover {
+				color: var(--dubium-modal-close-hover);
+			}
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	& &__body {
+		overflow-y: auto;
+
+		position: relative;
+		flex: 1 1 auto;
+		padding: var(--dubium-modal-padding-body);
+		background-color: var(--dubium-modal-bg-body);
+	}
+
+	& &__footer {
+		display: flex;
+		flex-wrap: wrap;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: flex-end;
+
+		padding: var(--dubium-modal-padding-footer);
+		background-color: var(--dubium-modal-bg-footer);
+
+		border-bottom-left-radius: var(--dubium-modal-br-left-bottom);
+		border-bottom-right-radius: var(--dubium-modal-br-right-bottom);
+	}
+
+	&__overlay {
+		background-color: var(--dubium-modal-overlay);
+	}
+
+	&__visible {
+		overflow: hidden;
+		padding-right: 17px;
+	}
+
+	&__scroll {
+		&--window {
+			overflow-y: auto !important;
+			.modal__dialog {
+				padding-bottom: 1.75em;
+			}
+		}
+
+		&--modal {
+			.modal__dialog {
+				height: calc(100% - 3.5em);
+			}
+		}
+	}
+}
+
+@keyframes modalShow {
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes modalHide {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
