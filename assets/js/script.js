@@ -11,6 +11,8 @@ if (localStorage.key("userLanguage") == null) {
 		windowInCenter: true,
 		show: true,
 		windowWidth: "large",
+		closeESC: false,
+		closeOutside: false
 	});
 } else {
 	setTimeout(() => {
