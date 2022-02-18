@@ -1,9 +1,6 @@
 title: DubiumModal
 author: DubiumEkb
-email:
-description: >
+email: dubium-ekb@yandex.ru
+description: > DubiumModal js library
 
 github_username: DubiumEkb
-
-sass:
-    style: compressed
