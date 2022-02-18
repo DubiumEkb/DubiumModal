@@ -5,12 +5,18 @@ title: Hello
 
 <header class="header">
 	<div class="container">
-		<a href="{{ "/" | relative_url }}" class="header--logo">
-			<img src="{{ "/assets/img/logo.svg" | relative_url }}" alt="{{ site.title }}">
-		</a>
-		<a href="{{ "/en/" | relative_url }}" class="header--lang btnSwitch">
-			<span>Switch to English</span>
-		</a>
+		<div class="flexbox">
+			<div class="flex-12 l:flex-6">
+				<a href="{{ " /" | relative_url }}" class="header--logo">
+					<img src="{{ " /assets/img/logo.svg" | relative_url }}" alt="{{ site.title }}">
+				</a>
+			</div>
+			<div class="flex-12 l:flex-6">
+				<a href="{{ " /en/" | relative_url }}" class="header--lang btnSwitch">
+					<span>Switch to English</span>
+				</a>
+			</div>
+		</div>
 	</div>
 </header>
 
