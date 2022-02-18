@@ -7,12 +7,12 @@ title: Hello
 	<div class="container">
 		<div class="flexbox">
 			<div class="flex-12 l:flex-6">
-				<a href="{{ " /" | relative_url }}" class="header--logo">
-					<img src="{{ " /assets/img/logo.svg" | relative_url }}" alt="{{ site.title }}">
+				<a href="{{ "/" | relative_url }}" class="header--logo">
+					<img src="{{ "/assets/img/logo.svg" | relative_url }}" alt="{{ site.title }}">
 				</a>
 			</div>
 			<div class="flex-12 l:flex-6">
-				<a href="{{ " /en/" | relative_url }}" class="header--lang btnSwitch">
+				<a href="{{ "/en/" | relative_url }}" class="header--lang btnSwitch">
 					<span>Switch to English</span>
 				</a>
 			</div>
