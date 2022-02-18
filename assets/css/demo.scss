@@ -1,12 +1,18 @@
-:root {
-
-}
-
 * {
 	margin: 0;
 	padding: 0;
+	&,
+	&::after,
+	&::before {
+		box-sizing: border-box;
+	}
 }
 
-*, *::after, *::before {
-	box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+@import "./components/params";
+@import "./components/container";
+@import "./components/flexbox";
+@import "./components/typography";
+@import "./components/btn";
+
+@import "./components/layout";

@@ -1,0 +1,18 @@
+.home {
+	&__svg {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 40px;
+		svg {
+			width: 100%;
+			max-width: 500px;
+		}
+	}
+	&__btns {
+		.flexbox {
+			.flex-12 {
+				margin-top: 20px;
+			}
+		}
+	}
+}
