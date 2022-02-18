@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Hello
 ---
 
 <header class="header">
@@ -7,7 +8,7 @@ layout: default
 		<a href="{{ "/" | relative_url }}" class="header--logo">
 			<img src="{{ "/assets/img/logo.svg" | relative_url }}" alt="{{ site.title }}">
 		</a>
-		<a href="{{ "/en/" | relative_url }}" class="header--lang">
+		<a href="{{ "/en/" | relative_url }}" class="header--lang btnSwitch">
 			<span>Switch to English</span>
 		</a>
 	</div>
@@ -30,7 +31,7 @@ layout: default
 			</svg>
 			<div class="home__btns">
 				<a href="https://github.com/DubiumEkb/DubiumModal/" target="_blank">Download from github</a>
-				<a href="{{ "/#example" | relative_url }}">View example</a>
+				<a href="#example">View example</a>
 			</div>
 		</div>
 	</section>
