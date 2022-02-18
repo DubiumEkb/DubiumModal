@@ -1236,18 +1236,45 @@ h6,
   opacity: 0.7;
 }
 
+.home {
+  background-image: url(../img/bg.png);
+}
+
+.home .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 360px;
+}
+
 .home__svg {
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-bottom: 40px;
 }
 
 .home__svg svg {
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
 }
 
 .home__btns .flexbox .flex-12 {
   margin-top: 20px;
+}
+
+.home__btns .flexbox .flex-12:first-child {
+  text-align: right;
 }
 /*# sourceMappingURL=demo.css.map */

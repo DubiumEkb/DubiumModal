@@ -5,10 +5,10 @@ title: Hello
 
 <header class="header">
 	<div class="container">
-		<a href="{{ " /" | relative_url }}" class="header--logo">
-			<img src="{{ " /assets/img/logo.svg" | relative_url }}" alt="{{ site.title }}">
+		<a href="{{ "/" | relative_url }}" class="header--logo">
+			<img src="{{ "/assets/img/logo.svg" | relative_url }}" alt="{{ site.title }}">
 		</a>
-		<a href="{{ " /en/" | relative_url }}" class="header--lang btnSwitch">
+		<a href="{{ "/en/" | relative_url }}" class="header--lang btnSwitch">
 			<span>Switch to English</span>
 		</a>
 	</div>

@@ -1,17 +1,29 @@
 .home {
+	background-image: url(../img/bg.png);
+	.container {
+		display: flex;
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		height: 360px;
+	}
 	&__svg {
-		margin-left: auto;
-		margin-right: auto;
+		text-align: center;
+		align-content: center;
+		height: fit-content;
 		margin-bottom: 40px;
 		svg {
 			width: 100%;
-			max-width: 500px;
+			max-width: 550px;
 		}
 	}
 	&__btns {
 		.flexbox {
 			.flex-12 {
 				margin-top: 20px;
+				&:first-child {
+					text-align: right;
+				}
 			}
 		}
 	}
