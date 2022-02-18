@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	const btnSwitch = document.querySelectorAll(".btnSwitch");
 
 	if (localStorage.key("userLanguage") == null) {
-		if (urlPage == "/") {
+		if (urlPage == "/DubiumModal/") {
 			localStorage.setItem("userLanguage", "ru");
-		} else if (urlPage == "/en/") {
+		} else if (urlPage == "/DubiumModal/en/") {
 			localStorage.setItem("userLanguage", "en");
 		}
 		const startModal = new DubiumModal("startModal", {
@@ -17,14 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		setTimeout(() => {
 			if (
 				localStorage.getItem("userLanguage") == "ru" &&
-				urlPage != "/"
+				urlPage != "/DubiumModal/"
 			) {
-				window.location.href = "/";
+				window.location.href = "/DubiumModal/";
 			} else if (
 				localStorage.getItem("userLanguage") == "en" &&
-				urlPage != "/en/"
+				urlPage != "/DubiumModal/en/"
 			) {
-				window.location.href = "/en/";
+				window.location.href = "/DubiumModal/en/";
 			}
 		}, 500);
 	}
@@ -32,22 +32,22 @@ document.addEventListener("DOMContentLoaded", function () {
 	btnSwitch.forEach((btn) => {
 		btn.addEventListener("click", (e) => {
 			e.preventDefault();
-			if (btn.pathname == "/") {
+			if (btn.pathname == "/DubiumModal/") {
 				localStorage.setItem("userLanguage", "ru");
-			} else if (btn.pathname == "/en/") {
+			} else if (btn.pathname == "/DubiumModal/en/") {
 				localStorage.setItem("userLanguage", "en");
 			}
 			setTimeout(() => {
 				if (
 					localStorage.getItem("userLanguage") == "ru" &&
-					urlPage != "/"
+					urlPage != "/DubiumModal/"
 				) {
-					window.location.href = "/";
+					window.location.href = "/DubiumModal/";
 				} else if (
 					localStorage.getItem("userLanguage") == "en" &&
-					urlPage != "/en/"
+					urlPage != "/DubiumModal/en/"
 				) {
-					window.location.href = "/en/";
+					window.location.href = "/DubiumModal/en/";
 				}
 			}, 500);
 		});
