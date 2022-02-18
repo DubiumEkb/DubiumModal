@@ -1,29 +1,3 @@
 <!-- Begin Scripts -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-<script>
-	$(document).ready(function () {
-		var speed = 100;
-		$('.sidebar-menu > li.have-children > a').click(function (e) {
-			e.preventDefault();
-			if (!$(this).parent().hasClass('active')) {
-				$('.sidebar-menu li ul').slideUp(speed);
-				$(this).next().slideToggle(speed);
-				$('.sidebar-menu li').removeClass('active');
-				$(this).parent().addClass('active');
-			} else {
-				$(this).next().slideToggle(speed);
-				$('.sidebar-menu li').removeClass('active');
-			}
-		});
-	});
-</script>
-
-<script>
-	$(".menu-link").click(function () {
-		$("#navigation").toggleClass("active");
-		$(".mobile-navigation").toggleClass("active");
-	});
-</script>
-
+<script src="{{ "/dist/DubiumModal.min.js" | relative_url }}"></script>
 <!-- End Scripts -->
