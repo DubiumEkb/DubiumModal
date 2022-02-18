@@ -10,7 +10,7 @@ if (localStorage.key("userLanguage") == null) {
 	const startModal = new DubiumModal("startModal", {
 		windowInCenter: true,
 		show: true,
-		windowWidth: large
+		windowWidth: "large"
 	});
 } else {
 	setTimeout(() => {
